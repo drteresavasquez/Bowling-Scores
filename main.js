@@ -11,31 +11,21 @@ scoreButtons.forEach(function (item) {
 });
 
 function getNumber(score) {
-    // console.log($(`#btn${score}`).val());
     if ($(`#btn${score}`).val() === "10" && scoreCount.length === 0){
         scoreCount.push(10);
         scoreCount.push(0);
-        // console.log("if");
     }else if($(`#btn${score}`).val() === "10" && scoreCount.length === 20){
         scoreCount.push(10);
-        // scoreCount.push(0);
     }else if(scoreCount.length === 20 && (scoreCount[18] + scoreCount[19]) >= 10){
         scoreCount.push(Number($(`#btn${score}`).val()));
-        // console.log("HERE!!!");
-        // realScore();
-        
         console.log("Real Score:",realScore());
     }else if(scoreCount.length < 20){
         scoreCount.push(Number($(`#btn${score}`).val()));
-        // console.log("HO!!!");
     }else{
         console.log("Real Normy:",realScore());
     }
     checkForTens();
 
-    // if (scoreCount.length > 20) {
-    //     $(".btn-group").hide();
-    // }
     console.log(scoreCount);
     let currentScore = scoreCount.reduce((a, b) => a + b);
     $(".currentScore").html(`<h2>${currentScore}</h2>`);
@@ -64,8 +54,8 @@ function realScore(){
     return actualScore;
 }
 
-
-
+// USE THIS FOR LOGIC IN MULTIPLE STRIKES
+// if(scoreCount[i-1]===10 && scoreCount[i+1]===10)
 
 
 
