@@ -1,6 +1,6 @@
 console.log("main.js");
 
-let scoreButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let scoreButtons = [...Array(11).keys()];
 let scoreCount = [];
 let actualScore = [];
 
@@ -56,14 +56,6 @@ function realScore(){
 
 // USE THIS FOR LOGIC IN MULTIPLE STRIKES
 // if(scoreCount[i-1]===10 && scoreCount[i+1]===10)
-
-
-
-
-
-
-
-
 
 
 
