@@ -21,6 +21,10 @@ function getNumber(score) {
         console.log("Real Score:",realScore());
     }else if(scoreCount.length < 20){
         scoreCount.push(Number($(`#btn${score}`).val()));
+        //trying to change number of buttons displayed for each bowl under 10
+        // let subtractButtons = 11 - Number($(`#btn${score}`).val());
+        // console.log(subtractButtons);
+        // scoreButtons = [...Array(`${subtractButtons}`).keys()];
     }else{
         console.log("Real Normy:",realScore());
     }
